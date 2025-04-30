@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Split It - Options</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    label { display: block; margin-top: 10px; }
+    input { width: 100%; padding: 5px; margin-top: 5px; }
+    button { margin-top: 15px; padding: 8px 12px; }
+  </style>
+</head>
+<body>
+  <h2>Split It - Primary User Info</h2>
+  <label>Name:<input id="primaryName" type="text" /></label>
+  <label>Email:<input id="primaryEmail" type="email" /></label>
+  <button id="saveBtn">Save</button>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      chrome.storage.sync.get(['primaryName','primaryEmail'], data => {
+        document.getElementById('primaryName').value = data.primaryName || '';
+        document.getElementById('primaryEmail').value = data.primaryEmail || '';
+      });
+      document.getElementById('saveBtn').addEventListener('click', () => {
+        const name = document.getElementById('primaryName').value;
+        const email = document.getElementById('primaryEmail').value;
+        chrome.storage.sync.set({ primaryName: name, primaryEmail: email }, () => {
+          alert('Saved!');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

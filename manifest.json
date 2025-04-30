@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Split It",
+    "version": "1.4",
+    "description": "Split Amazon purchase among friends – uses a dropdown panel at top-right with due-date and dashboard link.",
+    "permissions": [
+      "storage",
+      "scripting"
+    ],
+    "host_permissions": [
+      "*://*.amazon.com/*",
+      "*://*.amazon.co.uk/*"
+    ],
+    "options_page": "options.html",
+    "content_scripts": [
+      {
+        "matches": ["*://*.amazon.com/*", "*://*.amazon.co.uk/*"],
+        "js": ["content.js"],
+        "css": ["panel.css"]
+      }
+    ]
+  }
+  

@@ -1,0 +1,53 @@
+/* Floating dropdown panel */
+#splitItPanel {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 320px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    display: none;
+    z-index: 100000;
+    font-family: Arial, sans-serif;
+  }
+  #splitItPanel h2 {
+    margin: 0 0 8px;
+    font-size: 16px;
+  }
+  #splitItPanel label {
+    display: block;
+    margin: 6px 0 4px;
+  }
+  #splitItPanel input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4px;
+  }
+  #splitItPanel button {
+    margin: 8px 4px 0 0;
+    padding: 6px 10px;
+    background: #ff9900;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  #splitItPanel .closeBtn {
+    background: #888;
+    float: right;
+  }
+  #splitItPanel table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+  }
+  #splitItPanel th, #splitItPanel td {
+    border: 1px solid #ddd;
+    padding: 4px;
+    text-align: left;
+    font-size: 12px;
+  }
+  
