@@ -140,7 +140,7 @@
     panel.querySelector('#dashboardBtn').addEventListener('click', e => {
       e.stopPropagation(); e.preventDefault();
       const user = encodeURIComponent(panel.querySelector('#primaryName').value || '');
-      window.open(`file:///Users/divik/Desktop/Repos/splitify-ext/history.html`, '_blank');
+      window.open(`https://splittpal.vercel.app/dashboard?user=${user}`, '_blank');
     });
   
     // Inject the “Split It” button
